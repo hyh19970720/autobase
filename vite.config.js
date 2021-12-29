@@ -1,4 +1,4 @@
-import { defineConfig } from "vite"; // 帮手函数 这样不用 jsdoc 注解也可以获取类型提示
+import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 const { resolve } = require("path");
 
@@ -9,6 +9,9 @@ export default defineConfig({
         alias: {
             "@": resolve(__dirname, "src"),
         },
+    },
+    define: {
+        process: { env: {} },
     },
     server: {
         port: 8888,

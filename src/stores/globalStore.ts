@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 
 const globalStore = createStore({
     state: {
-        author: "coderhyh",
+        copyright: "coderhyh",
     },
 });
 

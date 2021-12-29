@@ -1,7 +1,5 @@
 <template>
-    <div class="Login">
-        <h3>WelCome To AutoBase</h3>
-    </div>
+    <div class="Home">222</div>
 </template>
 
 <script setup lang="ts"></script>

@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AutoBase</title>
   </head>
-  <body>
+  <body>    
+    <script>
+      // 阻止右键打开菜单
+      document.oncontextmenu = (e) => e.preventDefault();
+  </script>
+  <script>
+      // 打印logo
+      const picAscii = 
+`          _    _ _______ ____  ____           _____ ______ 
+     /\\  | |  | |__   __/ __ \\|  _ \\   /\\    / ____|  ____|
+    /  \\ | |  | |  | | | |  | | |_) | /  \\  | (___ | |__   
+   / /\\ \\| |  | |  | | | |  | |  _ < / /\\ \\  \\___ \\|  __|  
+  / ____ \\ |__| |  | | | |__| | |_) / ____ \\ ____) | |____ 
+ /_/    \\_\\____/   |_|  \\____/|____/_/    \\_\\_____/|______|
+                                                           
+`;
+      console.log(picAscii);
+  </script>
+    <noscript>
+      <strong>We're sorry but this AutoBase doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+    </noscript>
+
     <div id="app"></div>
     <script type="module" src="/src/main"></script>
   </body>
