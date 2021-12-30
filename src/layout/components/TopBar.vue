@@ -1,7 +1,11 @@
 <template>
-    <div class="header-bar"></div>
+    <div class="header-bar">
+        <TopBarRight></TopBarRight>
+    </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TopBarRight from "./TopBarRight.vue";
+</script>
 
 <style lang="scss" scoped></style>

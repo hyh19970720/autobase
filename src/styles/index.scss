@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 html,
@@ -8,18 +9,160 @@ body {
     height: 100%;
     font-family: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Microsoft YaHei", serif;
     overflow: hidden;
-    padding: 0;
+    user-select: none;
 }
 
+li {
+    list-style: none;
+}
+
+// layout
 .main-view {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 
     .header-bar {
         position: relative;
         height: 80px;
         width: 100%;
-        background: url("@/assets/images/layout/header.png");
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            background: url("@/assets/images/layout/header.png");
+        }
+
+        .header-bar-right-part {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            height: 80px;
+            padding: 0 20px;
+            cursor: pointer;
+            z-index: 9;
+
+            > .avatar {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                > img {
+                    height: 40px;
+                    width: 40px;
+                    background-color: #fff;
+                }
+
+                > .svg-icon {
+                    height: 40px;
+                    width: 40px;
+                    color: #fff;
+                }
+            }
+
+            > .flashing {
+                width: 25px;
+                height: 25px;
+                color: #fff;
+                transform: rotate(0deg);
+                transition: all 0.5s ease;
+            }
+
+            &:hover {
+                .flashing {
+                    transform: rotate(180deg);
+                }
+            }
+
+            > .name {
+                padding: 0 10px;
+                text-align: center;
+                font-size: 20px;
+                color: #fff;
+            }
+
+            .popup-options {
+                position: absolute;
+                top: 90px;
+                right: 0;
+
+                > ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    width: 0;
+
+                    > li {
+                        width: 240px;
+                        padding: 10px 20px;
+                        background: url("@/assets/images/layout/popup.png") no-repeat;
+                        background-size: 100% 100%;
+                        transform: translateX(100%);
+                        transition: all 0.2s ease;
+
+                        &:nth-of-type(2) {
+                            transition-delay: 0.02s;
+                        }
+                        &:nth-of-type(3) {
+                            transition-delay: 0.04s;
+                        }
+                        &:nth-of-type(4) {
+                            transition-delay: 0.06s;
+                        }
+                        &:nth-of-type(5) {
+                            transition-delay: 0.08s;
+                        }
+                        &:nth-of-type(6) {
+                            transition-delay: 0.1s;
+                        }
+                        &:nth-of-type(7) {
+                            transition-delay: 0.12s;
+                        }
+
+                        &:hover {
+                            z-index: 1;
+                            width: 300px;
+                            padding: 30px 20px;
+                            transition: all 0.2s ease;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .popup-options {
+                    > ul > li {
+                        transform: translateX(0);
+                        transition: all 0.2s ease;
+
+                        &:nth-of-type(2) {
+                            transition-delay: 0.02s;
+                        }
+                        &:nth-of-type(3) {
+                            transition-delay: 0.04s;
+                        }
+                        &:nth-of-type(4) {
+                            transition-delay: 0.06s;
+                        }
+                        &:nth-of-type(5) {
+                            transition-delay: 0.08s;
+                        }
+                        &:nth-of-type(6) {
+                            transition-delay: 0.1s;
+                        }
+                        &:nth-of-type(7) {
+                            transition-delay: 0.12s;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
