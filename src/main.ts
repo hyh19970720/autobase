@@ -4,9 +4,14 @@ import routes from "./routes";
 import store from "./stores";
 import App from "./App.vue";
 import SvgIcon from "@/components/SvgIcon.vue";
+import axios from "axios";
 
 import "./styles/index.scss";
-// import "virtual:svg-icons-register";
+
+if (process.env.NODE_ENV === "development") {
+    axios.defaults.baseURL = "./api";
+} else if (process.env.NODE_ENV === "production") {
+}
 
 const router = createRouter({
     routes,

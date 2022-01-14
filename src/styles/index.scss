@@ -10,6 +10,10 @@ body {
     font-family: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Microsoft YaHei", serif;
     overflow: hidden;
     user-select: none;
+    --button-radius: 20px;
+    --white: #f0f0f0;
+    --dark-white: #bbb;
+    --black: #111;
 }
 
 li {
